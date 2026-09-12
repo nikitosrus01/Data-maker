@@ -1,0 +1,143 @@
+2026-09-12 14:43:03 | INFO     | __main__ | Первая инициализация моделей (устройство: cpu)...
+2026-09-12 14:43:03 | INFO     | core.detector | Инициализация GroundingDINODetector (модель=IDEA-Research/grounding-dino-tiny, устройство=cpu)
+2026-09-12 14:43:03 | INFO     | core.segmenter | Инициализация SAMSegmenter (модель=facebook/sam-vit-base, устройство=cpu)
+2026-09-12 14:43:06 | INFO     | core.detector | Загрузка весов GroundingDINO: IDEA-Research/grounding-dino-tiny
+2026-09-12 14:48:29 | INFO     | __main__ | Первая инициализация моделей (устройство: cpu)...
+2026-09-12 14:48:29 | INFO     | core.detector | Инициализация GroundingDINODetector (модель=IDEA-Research/grounding-dino-tiny, устройство=cpu)
+2026-09-12 14:48:29 | INFO     | core.segmenter | Инициализация SAMSegmenter (модель=facebook/sam-vit-base, устройство=cpu)
+2026-09-12 14:48:32 | INFO     | core.detector | Загрузка весов GroundingDINO: IDEA-Research/grounding-dino-tiny
+2026-09-12 14:49:01 | INFO     | __main__ | Первая инициализация моделей (устройство: cpu)...
+2026-09-12 14:49:01 | INFO     | core.detector | Инициализация GroundingDINODetector (модель=IDEA-Research/grounding-dino-tiny, устройство=cpu)
+2026-09-12 14:49:01 | INFO     | core.segmenter | Инициализация SAMSegmenter (модель=facebook/sam-vit-base, устройство=cpu)
+2026-09-12 14:49:03 | INFO     | core.detector | Загрузка весов GroundingDINO: IDEA-Research/grounding-dino-tiny
+2026-09-12 15:01:57 | INFO     | core.detector | GroundingDINO загружен успешно
+2026-09-12 15:01:57 | INFO     | core.segmenter | Загрузка весов SAM: facebook/sam-vit-base
+2026-09-12 15:07:51 | INFO     | core.segmenter | SAM загружен успешно
+2026-09-12 15:09:54 | ERROR    | __main__ | Ошибка обработки: Несовместимая версия transformers для post-обработки GroundingDINO. Обновите библиотеку: pip install -U transformers. Исходная ошибка: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+Traceback (most recent call last):
+  File "/home/nikita/Documents/GitHub/Data-maker/core/detector.py", line 113, in detect
+    results = self._processor.post_process_grounded_object_detection(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/nikita/Documents/GitHub/Data-maker/app.py", line 73, in handle_single_image
+    result = pipeline.process_image(image, text_prompt, box_threshold, text_threshold)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Documents/GitHub/Data-maker/core/pipeline.py", line 69, in process_image
+    boxes, scores, labels = self.detector.detect(
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Documents/GitHub/Data-maker/core/detector.py", line 121, in detect
+    raise RuntimeError(
+RuntimeError: Несовместимая версия transformers для post-обработки GroundingDINO. Обновите библиотеку: pip install -U transformers. Исходная ошибка: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+
+2026-09-12 15:10:38 | ERROR    | __main__ | Ошибка обработки: Несовместимая версия transformers для post-обработки GroundingDINO. Обновите библиотеку: pip install -U transformers. Исходная ошибка: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+Traceback (most recent call last):
+  File "/home/nikita/Documents/GitHub/Data-maker/core/detector.py", line 113, in detect
+    results = self._processor.post_process_grounded_object_detection(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/nikita/Documents/GitHub/Data-maker/app.py", line 73, in handle_single_image
+    result = pipeline.process_image(image, text_prompt, box_threshold, text_threshold)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Documents/GitHub/Data-maker/core/pipeline.py", line 69, in process_image
+    boxes, scores, labels = self.detector.detect(
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Documents/GitHub/Data-maker/core/detector.py", line 121, in detect
+    raise RuntimeError(
+RuntimeError: Несовместимая версия transformers для post-обработки GroundingDINO. Обновите библиотеку: pip install -U transformers. Исходная ошибка: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+
+2026-09-12 15:10:48 | ERROR    | __main__ | Ошибка обработки: Несовместимая версия transformers для post-обработки GroundingDINO. Обновите библиотеку: pip install -U transformers. Исходная ошибка: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+Traceback (most recent call last):
+  File "/home/nikita/Documents/GitHub/Data-maker/core/detector.py", line 113, in detect
+    results = self._processor.post_process_grounded_object_detection(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/nikita/Documents/GitHub/Data-maker/app.py", line 73, in handle_single_image
+    result = pipeline.process_image(image, text_prompt, box_threshold, text_threshold)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Documents/GitHub/Data-maker/core/pipeline.py", line 69, in process_image
+    boxes, scores, labels = self.detector.detect(
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Documents/GitHub/Data-maker/core/detector.py", line 121, in detect
+    raise RuntimeError(
+RuntimeError: Несовместимая версия transformers для post-обработки GroundingDINO. Обновите библиотеку: pip install -U transformers. Исходная ошибка: GroundingDinoProcessor.post_process_grounded_object_detection() got an unexpected keyword argument 'box_threshold'
+
+2026-09-12 15:13:39 | INFO     | __main__ | Первая инициализация моделей (устройство: cpu)...
+2026-09-12 15:13:39 | INFO     | core.detector | Инициализация GroundingDINODetector (модель=IDEA-Research/grounding-dino-tiny, устройство=cpu)
+2026-09-12 15:13:39 | INFO     | core.segmenter | Инициализация SAMSegmenter (модель=facebook/sam-vit-base, устройство=cpu)
+2026-09-12 15:13:42 | INFO     | core.detector | Загрузка весов GroundingDINO: IDEA-Research/grounding-dino-tiny
+2026-09-12 15:13:47 | INFO     | core.detector | GroundingDINO загружен успешно
+2026-09-12 15:13:47 | INFO     | core.segmenter | Загрузка весов SAM: facebook/sam-vit-base
+2026-09-12 15:13:49 | INFO     | core.segmenter | SAM загружен успешно
+2026-09-12 15:14:46 | INFO     | __main__ | Первая инициализация моделей (устройство: cpu)...
+2026-09-12 15:14:46 | INFO     | core.detector | Инициализация GroundingDINODetector (модель=IDEA-Research/grounding-dino-tiny, устройство=cpu)
+2026-09-12 15:14:46 | INFO     | core.segmenter | Инициализация SAMSegmenter (модель=facebook/sam-vit-base, устройство=cpu)
+2026-09-12 15:14:48 | INFO     | core.detector | Загрузка весов GroundingDINO: IDEA-Research/grounding-dino-tiny
+2026-09-12 15:14:52 | INFO     | core.detector | GroundingDINO загружен успешно
+2026-09-12 15:14:52 | INFO     | core.segmenter | Загрузка весов SAM: facebook/sam-vit-base
+2026-09-12 15:14:55 | INFO     | core.segmenter | SAM загружен успешно
+2026-09-12 15:15:47 | INFO     | __main__ | Первая инициализация моделей (устройство: cpu)...
+2026-09-12 15:15:47 | INFO     | core.detector | Инициализация GroundingDINODetector (модель=IDEA-Research/grounding-dino-tiny, устройство=cpu)
+2026-09-12 15:15:47 | INFO     | core.segmenter | Инициализация SAMSegmenter (модель=facebook/sam-vit-base, устройство=cpu)
+2026-09-12 15:15:50 | INFO     | core.detector | Загрузка весов GroundingDINO: IDEA-Research/grounding-dino-tiny
+2026-09-12 15:15:54 | INFO     | core.detector | GroundingDINO загружен успешно
+2026-09-12 15:15:54 | INFO     | core.segmenter | Загрузка весов SAM: facebook/sam-vit-base
+2026-09-12 15:15:57 | INFO     | core.segmenter | SAM загружен успешно
+2026-09-12 15:16:26 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'cat'
+2026-09-12 15:16:29 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:16:41 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Кошка'
+2026-09-12 15:16:45 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:16:54 | INFO     | core.exporters | COCO-аннотации сохранены: /home/nikita/Documents/GitHub/Data-maker/tmp/single_85fbf9f965/annotations_coco.json (изображений=1, объектов=1)
+2026-09-12 15:18:43 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'человек'
+2026-09-12 15:18:47 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:18:51 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'человек'
+2026-09-12 15:18:54 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:18:59 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'человек'
+2026-09-12 15:19:02 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:19:02 | INFO     | core.exporters | YOLO-аннотации сохранены в /home/nikita/Documents/GitHub/Data-maker/tmp/batch_images_ad24488661/labels (изображений=3)
+2026-09-12 15:23:33 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Самолёт'
+2026-09-12 15:23:37 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:23:42 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Самолёт'
+2026-09-12 15:23:45 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:23:50 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Самолёт'
+2026-09-12 15:23:54 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:23:59 | INFO     | core.detector | Детекция завершена: найдено 2 объектов по запросу 'Самолёт'
+2026-09-12 15:24:04 | INFO     | core.segmenter | Сегментация завершена для 2 боксов
+2026-09-12 15:24:10 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Самолёт'
+2026-09-12 15:24:15 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:24:20 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Самолёт'
+2026-09-12 15:24:25 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:24:30 | INFO     | core.detector | Детекция завершена: найдено 2 объектов по запросу 'Самолёт'
+2026-09-12 15:24:34 | INFO     | core.segmenter | Сегментация завершена для 2 боксов
+2026-09-12 15:24:34 | INFO     | core.exporters | YOLO-аннотации сохранены в /home/nikita/Documents/GitHub/Data-maker/tmp/batch_images_02555d3cf4/labels (изображений=7)
+2026-09-12 15:25:24 | INFO     | core.video_processor | Видео: fps=30.00, кадров=3716, длительность≈123.9с, интервал=15.0с
+2026-09-12 15:25:29 | INFO     | core.detector | Детекция завершена: найдено 0 объектов по запросу 'Airplane, drone'
+2026-09-12 15:25:29 | INFO     | core.pipeline | По запросу 'Airplane, drone' объекты не найдены на изображении
+2026-09-12 15:25:33 | INFO     | core.detector | Детекция завершена: найдено 4 объектов по запросу 'Airplane, drone'
+2026-09-12 15:25:37 | INFO     | core.segmenter | Сегментация завершена для 4 боксов
+2026-09-12 15:25:42 | INFO     | core.detector | Детекция завершена: найдено 3 объектов по запросу 'Airplane, drone'
+2026-09-12 15:25:45 | INFO     | core.segmenter | Сегментация завершена для 3 боксов
+2026-09-12 15:25:51 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Airplane, drone'
+2026-09-12 15:25:55 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:26:01 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Airplane, drone'
+2026-09-12 15:26:05 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:26:11 | INFO     | core.detector | Детекция завершена: найдено 2 объектов по запросу 'Airplane, drone'
+2026-09-12 15:26:16 | INFO     | core.segmenter | Сегментация завершена для 2 боксов
+2026-09-12 15:26:21 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Airplane, drone'
+2026-09-12 15:26:26 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:26:32 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Airplane, drone'
+2026-09-12 15:26:36 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:26:42 | INFO     | core.detector | Детекция завершена: найдено 1 объектов по запросу 'Airplane, drone'
+2026-09-12 15:26:47 | INFO     | core.segmenter | Сегментация завершена для 1 боксов
+2026-09-12 15:26:47 | INFO     | core.exporters | YOLO-аннотации сохранены в /home/nikita/Documents/GitHub/Data-maker/tmp/video_2d1fcf052e/labels (изображений=9)

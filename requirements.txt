@@ -1,0 +1,20 @@
+# Базовый стек глубокого обучения
+# Для GPU-версии PyTorch перед установкой посмотрите нужную команду на
+# https://pytorch.org/get-started/locally/ (зависит от версии CUDA на вашей машине).
+torch>=2.2.0
+torchvision>=0.17.0
+
+# GroundingDINO и SAM подключаются через реализацию HuggingFace Transformers
+transformers>=4.44.0
+accelerate>=0.30.0
+
+# Работа с видео и изображениями
+opencv-python-headless>=4.9.0
+Pillow>=10.2.0
+numpy>=1.26.0
+
+# Веб-интерфейс
+gradio>=4.44.0
+
+# Прочее
+tqdm>=4.66.0
